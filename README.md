@@ -8,6 +8,7 @@ bare Express JS server that serves API Calls from MongoDB Database
 ### Running the server
 
 - replace the Database url in config/db.config.js with your own.
+- install the node modules running npm install
 - run npm start command to start the server.
 
 ### Current API Calls
