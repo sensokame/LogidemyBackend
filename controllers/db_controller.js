@@ -1,5 +1,6 @@
 const db = require("../models");
 const fallacies = db.logical_fallacies;
+const content = db.content
 
 // Retrieve all Fallacies from the database.
 exports.findAll = (req, res) => {
@@ -57,4 +58,21 @@ exports.findAllByCategory = (req, res) => {
         .catch(err => {
             res.status(500).send({message : "Error retrieving fallacies"});
         });
+};
+
+// Retrieve content by name
+exports.findContent = (req, res) => {
+    var title = req.params.title.replace('_', ' ');
+    content.findOne({title: title})
+      .then(data => {
+        if (!data){
+          res.status(400).send({message : "Content with title " + title + " not found"});
+        }
+        else{
+          res.send(data);
+        }
+      })
+      .catch(err => {
+        res.status(500).send({message : "Error retrieving content with title " + title});
+      });
 };

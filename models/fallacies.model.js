@@ -1,5 +1,5 @@
 module.exports = mongoose => {
-    const Tutorial = mongoose.model(
+    const Fallacy = mongoose.model(
       "logical_fallacies",
       mongoose.Schema(
         {
@@ -16,5 +16,5 @@ module.exports = mongoose => {
       )
     );
   
-    return Tutorial;
+    return Fallacy;
   };

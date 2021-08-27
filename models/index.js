@@ -7,5 +7,6 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.logical_fallacies = require("./fallacies.model.js")(mongoose);
+db.content = require("./content.model.js")(mongoose);
 
 module.exports = db;
