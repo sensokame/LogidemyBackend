@@ -16,10 +16,10 @@ bare Express JS server that serves API Calls from MongoDB Database
 - server_url/fallacies : will return all the fallacies from the database.
 - server_url/fallacies/fallacy_id : will return a specific fallacy from the database.
 - server_url/fallacies/ByCategory : will return the fallacies category and in each category an array of the fallacies names and keys of that category.
+- server_udl/content/content_name : will return a specific content page from the database.
 
 ### Road Map
 
 Implement other API calls : 
-- Getting content pages from the database.
 - Getting feed posts [second version of the app]
 
